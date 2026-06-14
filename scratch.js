@@ -26,11 +26,10 @@ modalOverlay.addEventListener('click', (e) => {
 
 // Обработка отправки формы
 modalForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+
     
     // Тут можно добавить логику отправки данных на сервер
     alert('Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
-    
-    modalForm.reset(); // Очищаем поля формы
+
     closeModal(); // Закрываем окно
 });
