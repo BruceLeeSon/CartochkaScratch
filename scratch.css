@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0b0f19;
+    color: #f3f4f6;
+    padding: 32px 20px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.main-header {
+    width: 100%;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.scratch-logo-img {
+    height: 90px;
+    width: auto;  
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(255, 171, 25, 0.2));
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+.examples-section {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+}
+
+.example-card {
+    background: #151d30;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid #24314f;
+    box-shadow: 0 8px 0px #1f2942;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.example-card:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0px #1f2942;
+}
+
+.example-img {
+    width: 100%;       
+    height: 220px;     
+    object-fit: cover;
+    border-bottom: 2px solid #24314f;
+}
+
+.example-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.example-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.example-info p {
+    font-size: 0.95rem;
+    color: #9ca3af;
+}
+
+.features-section {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.feature-card {
+    background: #151d30;
+    padding: 24px;
+    border-radius: 24px;
+    border: 2px solid #ffab19;
+    box-shadow: 0 8px 0px #d4890c, 0 0 20px rgba(255, 171, 25, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0px #d4890c, 0 0 12px rgba(255, 171, 25, 0.05);
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffab19;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #e5e7eb;
+}
+
+.action-section {
+    padding-top: 16px;
+}
+
+.cta-button {
+    width: 100%;
+    background-color: #ffab19;
+    color: #0b0f19;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 24px rgba(255, 171, 25, 0.25);
+    border-bottom: 6px solid #d4890c;
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button:active {
+    transform: translateY(4px);
+    border-bottom-width: 2px;
+    box-shadow: 0 0 12px rgba(255, 171, 25, 0.15);
+}
+
+/* --- Стили для Модального Окна (Формы) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 15, 25, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    background: #151d30;
+    border: 2px solid #ffab19;
+    box-shadow: 0 12px 0px #d4890c, 0 0 30px rgba(255, 171, 25, 0.15);
+    border-radius: 28px;
+    width: 100%;
+    max-width: 450px;
+    padding: 32px 24px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #ffab19;
+}
+
+.modal-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffab19;
+    padding-left: 4px;
+}
+
+.input-group input {
+    background: #0b0f19;
+    border: 2px solid #24314f;
+    border-radius: 14px;
+    padding: 14px 16px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: #ffab19;
+    box-shadow: 0 0 10px rgba(255, 171, 25, 0.15);
+}
+
+.input-group input::placeholder {
+    color: #4b5563;
+}
+
+.form-submit-btn {
+    margin-top: 10px;
+    padding: 16px;
+    font-size: 1.15rem;
+}

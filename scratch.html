@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс по Scratch | Школа программирования KODAMA</title>
+    <link rel="stylesheet" href="scratch.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Scratch Logo" class="scratch-logo-img">
+        </div>
+    </header>
+
+    <main class="main-container">
+        
+        <section class="hero-section">
+            <h1 class="hero-title">Программирование на Scratch</h1>
+            <p class="hero-subtitle">Создай свою первую игру за 5 минут. Курс для детей от 7 до 12 лет, где логика превращается в магию.</p>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">Чему ты научишься:</h2>
+            <div class="feature-card">
+                <h3>Создавать игры</h3>
+                <p>Узнаешь, как управлять персонажами, настраивать физику и придумывать сюжеты.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Думать как кодер</h3>
+                <p>Разберешься с циклами, условиями и переменными без скучной зубрежки.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Озвучивать проекты</h3>
+                <p>Добавишь музыку и спецэффекты, чтобы игра ожила.</p>
+            </div>
+        </section>
+
+        <section class="examples-section">
+            <h2 class="section-title">Проекты созданные нашими учениками:</h2>
+            <div class="example-card">
+                <img src="game1.png" alt="Игра Гонки" class="example-img">
+                <div class="example-info">
+                    <h4>Игра «Гонки с препятствиями»</h4>
+                    <p>Ты ездишь на спортивной машине, объезжая разные препятствия.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="action-section">
+            <button class="cta-button" id="openModalBtn">Записаться на урок</button>
+        </section>
+
+    </main>
+
+    <div id="orderModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn">&times;</button>
+            <h3 class="modal-title">Запись на урок</h3>
+            <form class="modal-form">
+                <div class="input-group">
+                    <label for="firstName">Имя</label>
+                    <input type="text" id="firstName" required placeholder="Например, Иван">
+                </div>
+                <div class="input-group">
+                    <label for="lastName">Фамилия</label>
+                    <input type="text" id="lastName" required placeholder="Например, Иванов">
+                </div>
+                <div class="input-group">
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" required placeholder="+7 (999) 999-99-99">
+                </div>
+                <div class="input-group">
+                    <label for="email">Эл. почта</label>
+                    <input type="email" id="email" required placeholder="example@mail.com">
+                </div>
+                <button type="submit" class="cta-button form-submit-btn">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scratch.js"></script>
+</body>
+</html>
