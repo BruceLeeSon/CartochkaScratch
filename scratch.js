@@ -25,11 +25,6 @@ modalOverlay.addEventListener('click', (e) => {
 });
 
 // Обработка отправки формы
-modalForm.addEventListener('submit', (e) => {
-
-    
-    // Тут можно добавить логику отправки данных на сервер
-    alert('Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
-
+modalForm.addEventListener('submit', () => {
     closeModal(); // Закрываем окно
 });
